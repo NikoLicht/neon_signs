@@ -12,14 +12,16 @@
 
 <body>
     <script src="script.js"></script>
-    <div class="seach-wrapper">
-        <label for="search">Search in signs</label>
-        <input type="search" id="search" data-search-input>
+    <div class="flex justify-center items-center my-6">
+        <div class="search-wrapper flex flex-col items-center">
+            <input type="search" id="search" placeholder="Seach for sign" data-search-input 
+                class="w-96 text-lg px-6 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
     </div>
     <div class="grid-container bg-stone-200 w-full h-full p-10">
-        <div id="target" class="grid grid-cols-4 gap-4">
+        <div id="target" class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
             <template data-sign-template>
-                <div class="relative max-w-xs min-w-[200px] min-h-[300px] bg-orange-200 rounded-xl bg-center bg-cover">
+                <div class="relative max-w-xs min-w-[200px] shadow-md min-h-[300px] bg-gray-200 rounded-xl alt='' bg-center bg-cover">
                     <div class="absolute inset-x-0 bottom-0 bg-gray-100 text-center rounded-lg w-full h-1/6">
                         <h3 data-title class="text-xl"></h3>
                         <p data-description></p>
